@@ -314,7 +314,7 @@ body {
 .box_booking_bg{
     position: absolute;
     width: 1047px;
-    top: -310px;
+    top: -363px;
      left: 50%;
      margin-left: -523.5px;
      z-index: 9;
@@ -328,7 +328,7 @@ body {
     width: 950px;
     justify-content: space-between;
     position: absolute;
-   top: -277px;
+   top: -335px;
     left: 50%;
     margin-left: -523.5px;
     z-index: 10;
@@ -337,7 +337,6 @@ body {
     align-items: center;
     font-family: "Open Sans", sans-serif;
 }
-
 .box_booking_content{
     padding: 10px 50px 0 0;
 

@@ -87,8 +87,16 @@
             <!-- header End -->
 
             <!-- banner Start -->
-            <div id="banner">
-                <video src="media/video.mp4" autoplay muted loop></video>
+            <div id="banner"><video muted="" preload="true" loop autoplay webkit-playsinline="webkit-playsinline" playsinline="playsinline">
+				<!--
+					미리 로드하기 설정 : preload
+					재생여부 : autoplay (자동재생)
+					사운드 설정 : muted (음소거)
+					반복재생여부 : loop (무한반복)
+				-->
+					<source src="media/video.mp4" type="video/mp4">
+				</video>
+        
             </div>
 
             <div class="wave_container">

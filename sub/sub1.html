@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1400">
+    <title>이무기</title>
+    <!-- 중복된 CDN 링크 제거 -->
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Webfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Reenie+Beanie&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/sub1.css">
+    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+    <!-- slick -->
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- top box Start -->
+        <div id="top">
+            <!-- header Start -->
+            <div id="header">
+                <div class="inner_header">
+                    <!-- link start -->
+                    <div class="link_wrap">
+                        <ul class="link">
+                            <li>
+                                <a href="#" class="search_btn">
+                                    <img src="../images/header/search.svg" alt="search">
+                                    Search
+                                </a>
+                                <div class="search_dropdown dropdown">
+                                    <input type="text" placeholder="Search..." />
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="language_btn">Languages</a>
+                                <div class="language_dropdown dropdown">
+                                    <a href="#">Korean</a>
+                                    <a href="#">English</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- link end -->
+                    <!-- nav start -->
+                    <div class="nav">
+                        <div>
+                            <h1 class="logo">
+                                <img src="../images/header/logo_white.png" alt="logo">
+                            </h1>
+                        </div>
+
+                        <ul class="gnb">
+                            <li><a href="#">exhibition</a></li>
+                            <li><a href="#">campaign</a></li>
+                            <li class="none_line"></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">shop</a></li>
+                        </ul>
+                    </div>
+                    <!-- nav end -->
+                </div>
+            </div>
+            <!-- header End -->
+
+            <!-- banner Start -->
+            <div id="banner">
+                <div class="slide_wrap">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="../images/sub1/banner1.jpg" alt="banner1"></div>
+                            <div class="swiper-slide"><img src="../images/sub1/banner2.jpg" alt="banner1"></div>
+                            <div class="swiper-slide"><img src="../images/sub1/banner3.jpg" alt="banner1"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <img src="../images/main/button_right.png" alt="slide button right">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="../images/main/button_left.png" alt="slide button left">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top end -->
+
+        <div class="inner_section1">
+            <div class="slide_container">
+                <div class="silde_content">
+                    <h3 class="slide_title">달리기: 새는 날고 물고기는 헤엄치고 인간은 달린다</h3>
+                    <p class="slide_date">2024-04-05 ~ 2024-07-28</p>
+                    <ul class="button_booking">
+                        <li>
+                            <a href="#" id="bookTicket">book a ticket</a>
+                        </li>
+                        <li>
+                            <a href="#" class="moreInfo">more info</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="slide_description">
+                    <p>
+                        4월 5일, 이무기가 열 번째 기획전시 <달리기 : 새는 날고 물고기는 헤엄치고 인간은 달린다>로 찾아왔습니다. 달리기는 누구나 손쉽게 할 수 있는 가장 민주적인 운동이자
+                            대표적인 생활 체육입니다. 단순한 움직임의 반복을 통해 잡념에서 벗어나게 하는 달리기의 리듬과 호흡을 다양한 설치 작품으로 선보이고, 달리기의 경험을 자신만의
+                            방식으로 기록한 미술 작품을 통해 자연스럽게 실천의 동기를 부여합니다. 전시에는 조각가 이형구를 비롯해 베를린 건축 그룹 플라스티크 판타스티크, 스위스 설치미술가
+                            지몬, 무용가 김보라와 작곡가 스티브 라이히, 자신의 삶 속에서 달리기를 실천해 온 배우 겸 사진가 류준열과 화가 노보 등 국내외 작가들의 작업이 소개됩니다. 전시를
+                            통해 일상에 활력을 더하는 달리기의 즐거움을 발견해보세요. 바쁜 생활 속에서도 건강한 삶을 가꾸고, 마음의 활력을 되찾는 의미 있는 변화를 경험하시길 바랍니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ticket Booking Modal -->
+        <div id="ticketModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Book a Ticket</h2>
+                <p>현재 모든 티켓이 판매되었습니다.</p>
+                <!-- 예약 폼 추가 -->
+            </div>
+        </div>
+
+        <!-- More Info Modal with QR Code -->
+        <div id="qrModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>복합문화예술공간 이무기</h2>
+                <p>2024년 이무기 전시정보</p>
+                <img src="../images/main/qrcode.png" alt="QR Code">
+            </div>
+        </div>
+
+        <!-- section2 start -->
+        <div id="section2" class="section">
+            <div class="slogan_line_wrap">
+                <div class="slogan_line">
+                    <h2 class="title">
+                        Exhibition
+                        <br><span>현재 전시</span>
+                    </h2>
+                </div>
+            </div>
+
+            <ul class="exhibition">
+                <li><a href="#"></a>
+                    <div class="exhibition_img">
+                        <img src="../images/sub1/ex_small1.jpg" alt="small banner 1">
+                        <a href="#" class="moreInfo hover_info">more info</a>
+                    </div>
+                    <ul class="button_booking2">
+                        <li>
+
+                            
+                            <a href="#" class="bookTicket">현재전시</a>
+                        </li>
+                        <li>
+                            <a href="#" class="moreInfo">티켓예약</a>
+                        </li>
+                    </ul>
+                    <div class="exhibition_content">
+                        <h2>국내여행, Grand Tour Korea</h2>
+                        <p>2024-06-06~2024-10-24</p>
+                    </div>
+                </li>
+                <li><a href="#"></a>
+                    <div class="exhibition_img">
+                        <img src="../images/sub1/ex_small2.jpg" alt="small banner 2">
+                        <a href="#" class="moreInfo hover_info">more info</a>
+                    </div>
+                    <ul class="button_booking2">
+                        <li>
+                            <a href="#" class="bookTicket">현재전시</a>
+                        </li>
+                        <li>
+                            <a href="#" class="moreInfo">티켓예약</a>
+                        </li>
+                    </ul>
+                    <div class="exhibition_content">
+                        <h2>BBUCK, 생존구역 on & off</h2>
+                        <p>2024-06-06~2024-10-24</p>
+                    </div>
+                </li>
+                <li><a href="#"></a>
+                    <div class="exhibition_img">
+                        <img src="../images/sub1/ex_small3.jpg" alt="small banner 3">
+                        <a href="#" class="moreInfo hover_info">more info</a>
+                    </div>
+                    <ul class="button_booking2">
+                        <li>
+                            <a href="#" class="bookTicket">현재전시</a>
+                        </li>
+                        <li>
+                            <a href="#" class="moreInfo">티켓예약</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="exhibition_content">
+                        <h2>정원 만들기, Garden ING</h2>
+                        <p>2024-06-06~2024-10-24</p>
+                    </div>
+                </li>
+                <li><a href="#"></a>
+                    <div class="exhibition_img">
+                        <img src="../images/sub1/ex_small4.jpg" alt="small banner 4">
+                        <a href="#" class="moreInfo hover_info">more info</a>
+                    </div>
+                    <ul class="button_booking2">
+                        <li>
+                            <a href="#" class="bookTicket">현재전시</a>
+                        </li>
+                        <li>
+                            <a href="#" class="moreInfo">티켓예약</a>
+                        </li>
+                    </ul>
+                    <div class="exhibition_content">
+                        <h2>프랑수아 알라르 사진전</h2>
+                        <p>2024-06-06~2024-10-24</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+         
+        <!-- section2 end -->
+
+        <!-- Emuki bg fixed start -->
+        <div id="exhibition_fixed"></div>
+        <!-- Emuki bg fixed End -->
+
+        <div id="section3" class="section">
+            <div class="previous_wrap">
+                <div class="pre_content">
+                    <h3>About the exhibition</h3>
+                    <p>About the exhibition 우리가 인디언으로 알던 북미 원주민은 미국 대륙에만 570여 개의 부족이 있으며 지역에 따라 다양한 문화를 가지고 있습니다. 이번
+                        전시에는 우리가 잘 알고 있는 독수리 깃털 머리 장식, 티피를 비롯하여 43개 부족의 과거와 현재를 아우르는 공예품, 회화 등 총 151점의 전시품을 국내 최초로
+                        선보입니다. 우리가 인디언으로 알던 북미 원주민은 어떤 사람들인지, 각각의 전시품은 어떤 이야기를 담고 있는지 전시실에서 직접 만나보시길 바랍니다.</p>
+                </div>
+                <div class="pre_img_wrap">
+                    <div class="pre_img pre_small_img">
+                        <img src="../images/sub1/pre1.jpg" alt="about exhibition1">
+                    </div>
+                    <div class="pre_img pre_large_img">
+                        <img src="../images/sub1/pre2.jpg" alt="about exhibition1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="previous_wrap reverse">
+                <div class="pre_img_wrap">
+                    <div class="pre_img pre_large_img">
+                        <img src="../images/sub1/pre3.jpg" alt="about exhibition1">
+                    </div>
+                    <div class="pre_img pre_small_img">
+                        <img src="../images/sub1/pre4.jpg" alt="about exhibition1">
+                    </div>
+                </div>
+                <div class="pre_content">
+                    <h3>About the exhibition</h3>
+                    <p>Curated by the NGV in collaboration with the artist especially for Australian audiences, the
+                        exhibition Yayoi Kusama includes many works never-before-seen by local audiences as well as a
+                        diverse display of the artist’s popular immersive rooms, including the global unveiling of the
+                        artist’s most recent immersive infinity mirror room work.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="bg_wrap" class="section">
+
+            <div id="section4">
+                <div class="inner_section4">
+                    <div class="mukimusic">
+                        <div class="bt_slogan_line_wrap">
+                            <div class="bt_slogan_line">
+                                <div class="slogan_bg">
+                                    <img src="../images/sub1/sloganbg.png" alt="slogan bg">
+                                </div>
+                                <h2 class="bt_title">
+
+                                    <span>음악공연</span> <br>
+                                    muki
+                                    show
+                                </h2>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="white_line">EVERY SINGLE</p>
+                            <p class="white_text">SATURDAY</p>
+                            <p class="white_line">EVERY SINGLE</p>
+                            <p class="white_text">SATURDAY</p>
+
+                        </div>
+                        <ul class="button_booking3">
+                            <li>
+                                <a href="#" class="bookTicket">Book a ticket</a>
+                            </li>
+                            <li>
+                                <a href="#" class="moreInfo">More info</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="musicthisweek">
+                        <div class="bt_slogan_line_wrap">
+                            <div class="bt_slogan_line">
+                                <div class="slogan_bg">
+                                    <img src="../images/sub1/sloganbg.png" alt="slogan bg">
+                                </div>
+                                <h2 class="bt_title">
+
+                                    <span>이 주의 뮤지션</span> <br>
+                                    MUSITIONS <br>
+                                    THIS WEEK
+                                </h2>
+                            </div>
+                            <div class="musition_container">
+                                <div class="musition_img musicbg1">
+                                    <div class="hover_text">Silica Gel</div>
+                                </div>
+                                <div class="musition_content">
+                                    <h3>실리카겔</h3>
+                                    <div class="musiton_content_en">
+                                        <p class="content_date">Fri 30 Aug <br> 12.30pm - 1.30pm</p>
+                                        <p class="content_location">Location</p>
+                                        <p class="content_info">Main Hall St Peter's Eastern Hill Anglican Church <br> 15 Gisborne St <br>
+                                            777 Sungsu-dong, Seoul</p>
+                                        <p><a href="#" class="open_map">Open in maps</a></p>
+                                        <p>Adult / general ₩20.0</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="musition_container">
+                                <div class="musition_content musition_content_left">
+                                    <h3>더솔루션</h3>
+                                    <div class="musiton_content_en">
+                                        <p class="content_date">Fri 30 Aug <br> 12.30pm - 1.30pm</p>
+                                        <p class="content_location">Location</p>
+                                        <p class="content_info">Main Hall St Peter's Eastern Hill Anglican Church <br> 15 Gisborne St <br>
+                                            777 Sungsu-dong, Seoul</p>
+                                        <p><a href="#" class="open_map">Open in maps</a></p>
+                                        <p>Adult / general ₩20.0</p>
+                                    </div>
+                                </div>
+                                <div class="musition_img musicbg2">
+                                    <div class="hover_text">The Solution</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+            <div id="section5">
+                <div class="bt_slogan_line_wrap">
+                    <div class="bt_slogan_line">
+                        <div class="slogan_bg">
+                            <img src="../images/sub1/sloganbg.png" alt="slogan bg">
+                        </div>
+                        <h2 class="bt_title">
+
+                            <span>2024 일정</span> <br>
+                            2024 MUKI PLAN
+                        </h2>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <ul>
+                        <li>
+                
+                            <div> <a href="#">
+                                    <h2>8월 공연</h2>
+                                    <p>실리카겔X이무기</p>
+                                </a> </div>
+              
+                        </li>
+                        <li>
+            
+                            <div> <a href="#">
+                                    <h2>9월 공연</h2>
+                                    <p>제이콥 오가와
+                                        밤의공연</p>
+                                </a> </div>
+         
+                        </li>
+                        <li>
+   
+                            <div> <a href="#">
+                                    <h2>10월</h2>
+                                    <p>ROCKBAM X 이무기</p>
+                                </a> </div>
+       
+                        </li>
+                        <li>
+      
+                            <div> <a href="#">
+                                    <h2>11월</h2>
+                                    <p>현대미술관 X 이무기</p>
+                                </a> </div>
+            
+                        </li>
+                        <li>
+              
+                            <div> <a href="#">
+                                    <h2>12월</h2>
+                                    <p>크리스마스 음악감상회</p>
+                                </a> </div>
+
+                        </li>
+                        
+
+
+                    </ul>
+                </div>
+
+
+            </div>
+            
+
+            <div id="footer">
+                <div class="inner_footer">
+                    <ul class="footer_social">
+                        <li><a href="http://www.instagram.com"><img src="../images/footer/icon1.png" alt="icon1"></a></li>
+                        <li><a href="http://www.youtube.com"><img src="../images/footer/icon2.png" alt="icon2"></a></li>
+                        <li><a href="http://www.x.com"><img src="../images/footer/icon3.png" alt="icon3"></a></li>
+                        <li><a href="#" class="share-icon"><img src="../images/footer/icon4.png" alt="icon4"></a></li>
+                    </ul>
+    
+                    <!-- 링크 공유 팝업 -->
+                    <div class="share-popup">
+                        <input type="text" class="page-url" readonly>
+                        <button class="copy-button">링크 복사</button>
+                    </div>
+    
+    
+    
+    
+                    <div class="footer_content">
+                        <div class="footer_notice">
+                            <h3>NOTICE <span class="icon">🔍</span></h3>
+                            <p><span>티켓 예매</span> <span class="normal">네이버, 29CM, 현장 예매도 가능합니다.</span></p>
+                            <p><span>단체 할인</span> <span class="normal">사전 예약 후 10인 이상 방문 시, 전시 티켓 20% OFF</span></p>
+                            <p><span>단체 예약</span> <span class="normal">문의 info@emuki.com | 02 777 7777</span></p>
+                        </div>
+                        <div class="footer_location">
+                            <h3>LOCATION <span class="icon">🔍</span></h3>
+                            <p><span>주소</span> <span class="normal">서울시 성동구 777번지, 이무기</span></p>
+                            <p><span>운영</span> <span class="normal">9:00AM - 9:00PM, 화 - 일 (월요일 휴관)</span></p>
+                            <p><span>주차</span> <span class="normal">발레파킹 최초 90분 3,000원 | 추가 10분 당 1,000원</span></p>
+                        </div>
+                    </div>
+                    <div class="footer_bottom">
+                        <p>아무기 EMUKI 서울시 성수로 777번지 대표전화 02-777-7777 | info@emuki.com</p>
+                        <p>통신판매업신고번호: 2020-서울성수-0704 사업자등록번호: 000-00-00000</p>
+                        <p>COPYRIGHT © EMUKI</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- js -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/script.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+<!-- google map -->
+
+    <script>
+        document.querySelectorAll('.open_map').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.open(
+                    'https://www.google.com/maps/search/?api=1&query=St+Peter\'s+Eastern+Hill+Anglican+Church', // 구글 지도 링크
+                    'GoogleMaps',
+                    'width=600,height=400'
+                );
+            });
+        });
+
+    </script>
+
+    <!-- accodian -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46156385-1', 'cssscript.com');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const exhibitionItems = document.querySelectorAll(".exhibition li");
+
+    // Intersection Observer 설정
+    const exhibitionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("visible");
+                }, index * 200); // 각 항목에 지연시간을 줌
+                observer.unobserve(entry.target); // 한 번 보이면 다시 관찰하지 않음
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // 모든 exhibition li를 관찰
+    exhibitionItems.forEach(item => {
+        exhibitionObserver.observe(item);
+    });
+});
+
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // 모든 .previous_wrap 요소를 선택
+    const boxes = document.querySelectorAll(".previous_wrap");
+
+    // Intersection Observer 설정
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible"); // 화면에 들어온 요소에 visible 클래스 추가
+                observer.unobserve(entry.target); // 한 번 보이면 다시 감지하지 않음
+            }
+        });
+    }, { threshold: 0.1 }); // 10% 보일 때 트리거
+
+    // 각 요소를 관찰
+    boxes.forEach(box => {
+        observer.observe(box);
+    });
+});
+
+</script>
+
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+    // 섹션 1의 모달을 제어하는 기존 코드
+    const ticketModal = document.getElementById("ticketModal");
+    const qrModal = document.getElementById("qrModal");
+
+    // 섹션 1과 4의 book a ticket 버튼 이벤트 (모든 클래스 .bookTicket에 이벤트 추가)
+    document.querySelectorAll(".bookTicket").forEach(function(button) {
+        button.addEventListener("click", function(e) {
+            e.preventDefault(); // 기본 동작 막기
+            ticketModal.style.display = "block"; // 티켓 모달 표시
+        });
+    });
+
+    // 섹션 1과 4의 more info 버튼 이벤트 (모든 클래스 .moreInfo에 이벤트 추가)
+    document.querySelectorAll(".moreInfo").forEach(function(button) {
+        button.addEventListener("click", function(e) {
+            e.preventDefault(); // 기본 동작 막기
+            qrModal.style.display = "block"; // 정보 모달 표시
+        });
+    });
+
+    // 모달 닫기 이벤트 (모든 .close 클래스에 대해 이벤트 추가)
+    document.querySelectorAll(".close").forEach(function(closeButton) {
+        closeButton.addEventListener("click", function() {
+            ticketModal.style.display = "none"; // 티켓 모달 닫기
+            qrModal.style.display = "none"; // 정보 모달 닫기
+        });
+    });
+});
+
+
+</script>
+
+
+</body>
+
+</html>

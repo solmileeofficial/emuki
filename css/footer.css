@@ -53,7 +53,7 @@ margin: 200px 0 0 0;
 .footer_content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     max-width: 1000px;
     position: relative;
@@ -74,6 +74,7 @@ margin: 200px 0 0 0;
 .footer_notice,
 .footer_location {
     width: 45%;
+    -moz-window-dragging: 500px;
     padding: 30px;
 }
 

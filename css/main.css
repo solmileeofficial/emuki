@@ -1204,6 +1204,7 @@ p.vertical_line::after {
 #section7 {
     width: 1320px;
     margin: 100px auto;
+    position: relative;
 }
 
 .dessert_container {
@@ -1456,6 +1457,22 @@ p.vertical_line::after {
     /* 취소 버튼 색상 */
     color: white;
 }
+
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #FFF;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    will-change: transform;
+    pointer-events: none;
+}
+
+
 
 #section8 {
     width: 1320px;

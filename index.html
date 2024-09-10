@@ -709,6 +709,7 @@
         <!-- Bottom wave effet End -->
         <!-- section7 Start -->
         <div id="section7" class="section">
+
             <div class="slogan_line_right_wrap">
                 <div class="slogan_line_right">
                     <h2 class="title">
@@ -768,6 +769,7 @@
                 </div>
 
             </div>
+
             <div class="dessert_container dessertbg2">
                 <div class="dessert_content cake2">
                     <h3>
@@ -827,6 +829,7 @@
                 </div>
 
             </div>
+       
 
 
             <!-- Order Popup Modal -->
@@ -841,8 +844,9 @@
             </div>
             <!-- order popup end -->
             <!-- section7 End -->
-
+            <div class="circle"></div>
         </div>
+ 
         <!-- section8 start -->
         <div id="section8" class="section">
             <div class="slogan_line_left_wrap">
@@ -1030,6 +1034,9 @@
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
+            autoplay: true,
+            autoplaySpeed: 0,/* 다음이미지로 넘어갈 시간 */
+                speed: 10000,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -1064,6 +1071,37 @@
             });
 
         });
+    </script>
+    <script>
+        const circle = document.querySelector('.circle')
+
+        let mouseX = 0
+        let mouseY = 0
+
+        let circleX = 0
+        let circleY = 0
+
+        let speed = 0.06
+
+        const animate = () => {
+            let distX = mouseX - circleX
+            let distY = mouseY - circleY
+            let translatedValue = `translate3d(${circleX}px, ${circleY}px, 0 )`;
+
+            circleX = circleX + (distX * speed)
+            circleY = circleY + (distY * speed)
+
+            circle.style.transform = translatedValue;
+
+            requestAnimationFrame(animate)
+        }
+
+        animate()
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX - circle.offsetWidth / 4;
+            mouseY = e.clientY - circle.offsetHeight / 4;
+        })
     </script>
 </body>
 

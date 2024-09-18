@@ -1,0 +1,749 @@
+/* 여백 초기화 */
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+html {
+    font-size: 17px;
+}
+
+
+body {
+    /* background: url(../images/background.png) repeat center; */
+    font-family: "Pretendard";
+    font-size: 17px;
+    line-height: 1.5em;
+    color: #fff;
+
+}
+
+#wrap {
+    min-width: 1400px;
+    overflow: hidden;
+}
+
+
+
+
+#top {
+    position: relative;
+    background-color: #fff;
+
+}
+
+#banner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+    width: 1920px;
+    height: 900px;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+#banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.banner_content {
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 150px;
+    position: absolute;
+    z-index: 10;
+    top: 400px;
+    left: 0;
+    width: 100%;
+}
+
+.banner_slogan {
+    font-size: 150px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.banner_text {
+    width: 800px;
+    line-height: 17px;
+}
+
+
+
+
+/* 검은색 배경 박스를 추가한 스타일 */
+.marquee-wrap {
+    margin-top: 750px;
+    z-index: 10;
+    width: 100%;
+    /* 가로 전체를 차지 */
+    overflow: hidden;
+    /* 넘치는 텍스트 숨김 */
+    position: relative;
+    background-color: #0A0808;
+    /* 검은색 배경 */
+    height: 30px;
+    /* 박스 높이 */
+    white-space: nowrap;
+    /* 한 줄로 텍스트 표시 */
+}
+
+/* 텍스트가 흐르는 애니메이션 */
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 12px;
+    animation: marquee 30s linear infinite;
+    /* 10초 동안 무한 반복 */
+}
+
+/* 텍스트 무한 반복 애니메이션 설정 */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+        /* 처음 위치 */
+    }
+
+    to {
+        transform: translateX(-50%);
+        /* 텍스트가 50% 이동 후 다시 처음으로 */
+    }
+}
+
+/* 섹션이 처음에는 보이지 않게 설정 */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 섹션이 뷰포트에 들어왔을 때 활성화되는 클래스 */
+.section.show {
+    opacity: 1;
+    transform: translateY(0); /* 원래 위치로 이동 */
+}
+
+#section1 {
+    width: 100%;
+    background: url(../images/sub2/bg.png) repeat center;
+}
+
+.inner_section1 {
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+/* 기본적으로 보이지 않도록 설정 */
+.cafemukibg1,
+.cafemukibg2,
+.cafemuki_right,
+.cafemuki_left
+ {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 보이게 할 때 사용할 클래스 */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 순서에 따라 다른 딜레이를 적용 */
+.cafemukibg1.show {
+    transition-delay: 0.2s;
+}
+.cafemuki_right.show {
+    transition-delay: 0.4s;
+}
+.cafemukibg2.show {
+    transition-delay: 0.6s;
+}
+.cafemuki_left.show {
+    transition-delay: 0.8s;
+}
+.bounce_text span {
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px); /* 글자를 아래로 이동 */
+    animation: bounce 0.9s ease forwards infinite; /* 애니메이션 무한 반복 */
+    animation-direction: alternate; /* 애니메이션이 끝나면 반대 방향으로 */
+}
+
+@keyframes bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* 아래에서 시작 */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px); /* 위로 튀기 */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* 원래 위치 */
+    }
+}
+
+.bounce_text:hover span {
+    animation-play-state: paused; /* 호버 시 애니메이션 일시 정지 */
+}
+
+
+.cafemuki{
+    padding-bottom: 200px;
+}
+
+.cafemuki_wrap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 300px;
+}
+
+
+.mukigoods_img {
+    background-image: url(../images/sub4/mukishop.jpg);
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    z-index: 9;
+}
+
+.cafemuki_img {
+    background-image: url(../images/sub4/cafemuki.png);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -962px;
+    z-index: 9;
+}
+
+.img_box {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 962px;
+    height: 200px;
+}
+
+.color_box {
+    width: 962px;
+    height: 200px;
+
+}
+
+.cafemuki_title {
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    right: 50%;
+    margin-right: -962px;
+    background-color: #E1AF02;
+}
+
+.mukigoods_title {
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    background-color: #057C36;
+    left: -302px;
+}
+
+.color_box h2 {
+    padding-top: 80px;
+    text-align: center;
+    font-size: 100px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    text-shadow: 5px 5px 0 rgb(26, 24, 24);
+}
+
+.cafemuki_content {
+    color: #0A0808;
+    width: 1320px;
+    display: flex;
+    justify-content: center;
+}
+.cafemuki_content_img {
+    border-radius: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 660px;
+    height: 600px;
+    box-sizing: border-box;
+    transition: background-size 0.5s ease, filter 1s ease; /* 부드러운 전환 */
+    overflow: hidden; /* 상자 밖으로 나가지 않도록 설정 */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); /* 요소 전체에 적용되는 그림자 */
+}
+
+.cafemukibg1:hover, .cafemukibg2:hover {
+    background-size: 110%; /* 호버 시 이미지 확대 (110%로 설정) */
+    filter: grayscale(100%); /* 호버 시 색상 반전만 적용 */
+}
+
+
+
+
+.cafemukibg1 {
+    background-image: url(../images/sub4/cafemuki1.jpg);
+}
+
+.cafemukibg2 {
+    background-image: url(../images/sub4/cafemuki2.jpg);
+}
+
+
+
+.cafemuki_content_text {
+    box-sizing: border-box;
+    width: 660px;
+    height: 600px;
+    position: relative;
+}
+
+.cafemuki_content_text p span {
+    font-size: 12px;
+    line-height: 18px;
+    display: block;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.cafemuki_right {
+    padding: 400px 0 0 50px;
+    text-align: left;
+}
+
+.cafemuki_left {
+    text-align: right;
+    padding: 380px 50px 0 0;
+}
+
+.cafemuki_left::after {
+    content: "";
+    position: absolute;
+    bottom: 240px;
+    right: 52px;
+    width: 40px;
+    height: 4px;
+    background-color: #0A0808;
+    opacity: 0.8;
+}
+
+.cafemuki_right::after {
+    content: "";
+    position: absolute;
+    bottom: 217px;
+    left: 48px;
+    width: 40px;
+    height: 4px;
+    background-color: #0A0808;
+    opacity: 0.8;
+}
+
+
+#section2, #section3 {
+    width: 100%;
+    background-color: #0A0808;
+}
+
+.inner_section2 {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+
+/* swiper */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+/* swiper end */
+
+  .swiper_wrap{
+    width: 1320px;
+    height: 646px;
+    border-radius: 50px; /* 모서리를 둥글게 */
+    overflow: hidden; /* 이미지가 radius 밖으로 넘치지 않도록 */
+  }
+
+  .slide{
+   width: 100%;
+  }
+
+  .slide_img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+
+
+  
+.hover_content {
+    position: absolute;
+  top: -500px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+   padding: 50px;
+   text-align: left;
+}
+
+
+
+.hover_content_title {
+    color: white;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.hover_content_price {
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.button_list {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.button_list li {
+    margin-right: 10px;
+}
+
+.button_list li a {
+    font-size: 10px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button_list li:nth-child(1) a {
+    background-color: #4c00ff;
+}
+
+.button_list li:nth-child(2) a {
+    background-color: #0A0808;
+}
+
+.pagination_button{
+    width:5px;
+    height:5px;
+    display: inline-block;
+    border-radius: 50%;
+ 
+
+}
+
+
+
+.inner_section3{
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.goods{
+    padding-top: 100px;
+}
+.goods_img1, .goods_img2 {
+    transition: background-size 0.8s ease-in-out; /* 시간을 늘려서 더 자연스럽게 전환 */
+    border-radius: 100px 0 100px 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.goods_img1 {
+    background-size: 150% auto; /* 기본적으로 100% 크기로 설정 */
+    background-image: url(../images/sub4/goodsinfo1.jpg);
+}
+
+.goods_img2 {
+    background-size: 100% auto; /* 기본적으로 100% 크기로 설정 */
+    background-image: url(../images/sub4/goodsex.jpg);
+}
+
+.goods_img2:hover {
+    background-size: 150%; /* 호버 시 200% 대신 150%로 변경하여 덜 급격한 변화 */
+}
+
+.goods_img1:hover{
+    background-size: 200%; 
+}
+
+/* product_wrap: 전체 제품 정보 박스 */
+.product_wrap {
+    color: white;
+    padding: 120px 0 0 20px;
+    width: 400px;
+    margin: 0 auto;
+    
+}
+
+/* 타이틀 위에 before로 선을 추가 */
+.product_title {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+.product_title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
+
+
+.product_title_ex::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 350px;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
+
+
+/* 가격 스타일 */
+.price {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 00;
+}
+
+.goods_logosticker{
+    text-align: left;
+}
+
+.goods_fabric{
+    text-align: right;
+}
+
+
+/* 제품 설명 스타일 */
+.product_description h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product_description p {
+  
+    font-size: 14px;
+}
+
+/* 토글 섹션 */
+.toggle_section {
+    margin-top: 20px;
+}
+
+/* 토글 타이틀 스타일 */
+.toggle_title {
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* 토글 내용 숨기기 */
+.toggle_content {
+    font-size: 12px;
+    display: none;
+    background-color:rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* 토글 활성화 시 내용 표시 */
+.toggle_content.active {
+    display: block;
+}
+
+
+
+.product_wrap {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.product_wrap.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ul, li 기본 스타일 */
+ul.product_grid {
+ padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+li.product_card {
+    width: 302px;
+    text-align: center;
+    position: relative;
+}
+.product_thumbnail {
+    position: relative;
+    overflow: hidden;
+    height: 440px; /* 세로 크기 설정 */
+    box-sizing: border-box;
+    border-radius: 15px; /* 부모 요소에도 border-radius 적용 */
+}
+
+.product_thumbnail img {
+    width: 302px; /* 이미지의 가로 크기 */
+    height: 440px; /* 이미지의 세로 크기 */
+    object-fit: cover; /* 이미지가 영역을 채우도록 */
+    transition: transform 0.5s ease; /* 호버 시 부드러운 변환 */
+}
+
+.product_thumbnail img:hover {
+    transform: scale(1.5); /* 확대 */
+}
+
+
+/* 이미지 위로 올라오는 검은색 배경 */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    transition: height 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_card:hover .overlay {
+    height: 50px; /* 호버 시 검은색 배경의 높이 */
+}
+
+.add_to_cart {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product_name {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+

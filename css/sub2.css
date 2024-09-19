@@ -228,9 +228,10 @@ body {
 
 
 #section1 {
-
+height: 980px;
     padding: 100px 0;
     width: 100%;
+    box-sizing: border-box;
 
 }
 
@@ -250,17 +251,8 @@ body {
 
 .egg_wrap li {
     padding-top: 50px;
-    opacity: 0;
-    transform: translateY(-50px); /* 위쪽에서 시작 */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-
-/* 보이는 상태일 때 적용될 클래스 */
-.egg_wrap li.show {
-    opacity: 1;
-    transform: translateY(0); /* 원래 위치로 이동 */
-}
 .egg_content {
 
     position: relative;
@@ -372,20 +364,6 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
-/* 처음에 li 요소들은 위에서 숨겨진 상태로 시작 */
-.campaign li {
-    opacity: 0;
-    transform: translateY(-50px); /* 위쪽에서 시작 */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 부드러운 전환 */
-}
-
-/* 보일 때 적용될 클래스 */
-.campaign li.show {
-    opacity: 1;
-    transform: translateY(0); /* 원래 위치로 이동 */
-}
-
 
 .campaign_wrap {
     width: 100%;

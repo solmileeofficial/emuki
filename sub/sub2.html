@@ -920,6 +920,54 @@
             mouseY = e.clientY - circle.offsetHeight / 4;
         })
     </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const liElements = document.querySelectorAll(".egg_wrap li");
+
+    // IntersectionObserver 설정
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); // 애니메이션 완료 후 더 이상 감지하지 않음
+            }
+        });
+    }, {
+        threshold: 0.1 // 10%가 화면에 나타나면 트리거
+    });
+
+    // 모든 li 요소를 관찰
+    liElements.forEach(li => {
+        observer.observe(li);
+    });
+});
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const campaignItems = document.querySelectorAll(".campaign li");
+
+    // IntersectionObserver 설정
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('show');
+                }, index * 200); // 0.2초 간격으로 각 li에 지연 효과 추가
+                observer.unobserve(entry.target); // 애니메이션 후 다시 감지하지 않음
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    // 각 li 요소에 대해 관찰 시작
+    campaignItems.forEach((item) => {
+        observer.observe(item);
+    });
+});
+
+    </script>
 </body>
 
 </html>

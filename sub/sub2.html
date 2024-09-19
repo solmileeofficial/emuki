@@ -63,12 +63,7 @@
                     <div class="nav">
                         <div>
                             <h1 class="logo">
-                                <a href="../index.html"> 
-                                    <img src="../images/header/logo_white.png" alt="logo"></a>
-
-                        
-                               
-
+                                <img src="../images/header/logo_white.png" alt="logo">
                             </h1>
                         </div>
 
@@ -919,6 +914,56 @@
             mouseX = e.clientX - circle.offsetWidth / 4;
             mouseY = e.clientY - circle.offsetHeight / 4;
         })
+    </script>
+    <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const liElements = document.querySelectorAll(".egg_wrap li");
+
+    // IntersectionObserver 설정
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('show');
+                }, index * 200); // 각 li 요소에 0.2초 간격으로 지연 효과
+                observer.unobserve(entry.target); // 더 이상 감지하지 않음
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    // 모든 li 요소를 관찰
+    liElements.forEach(li => {
+        observer.observe(li);
+    });
+});
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const campaignItems = document.querySelectorAll(".campaign li");
+
+    // IntersectionObserver 설정
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('show');
+                }, index * 200); // 0.2초 간격으로 각 li에 지연 효과 추가
+                observer.unobserve(entry.target); // 애니메이션 후 다시 감지하지 않음
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    // 각 li 요소에 대해 관찰 시작
+    campaignItems.forEach((item) => {
+        observer.observe(item);
+    });
+});
+
     </script>
 </body>
 

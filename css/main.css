@@ -1113,7 +1113,16 @@ p.vertical_line::after {
 
 .egg_wrap li {
     padding-top: 50px;
+    opacity: 0; /* 애니메이션 전 기본 상태 */
+    transform: translateY(20px); /* 애니메이션 전 기본 위치 */
+    transition: all 0.5s ease-in-out; /* 애니메이션 효과 */
 }
+
+.egg_wrap li.show {
+    opacity: 1; /* 보이게 */
+    transform: translateY(0); /* 원래 위치로 이동 */
+}
+
 
 .egg_content {
 

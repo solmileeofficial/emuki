@@ -80,7 +80,7 @@ document.querySelectorAll('.pickupbutton').forEach(function(button) {
 
 
 // 모달
-
+// 모달 제어 코드
 document.addEventListener("DOMContentLoaded", function() {
     const modals = {
         ticket: document.getElementById('ticketModal'),
@@ -89,37 +89,41 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     const closeButtons = document.querySelectorAll('.close');
-    const confirmButtons = document.querySelectorAll('.confirm-button'); // 수정: 클래스 이름 일치
-    const cancelButtons = document.querySelectorAll('.cancel-button');   // 수정: 클래스 이름 일치
+    const confirmButtons = document.querySelectorAll('.confirm-button');
+    const cancelButtons = document.querySelectorAll('.cancel-button');
 
-    // Open Modal Functions
+    // 모달 열기 함수
     function openModal(modal) {
         modal.style.display = 'block';
     }
 
-    // Close Modal Functions
+    // 모달 닫기 함수
     function closeModal(modal) {
         modal.style.display = 'none';
     }
 
-    // Open modal event listeners
+    // bookTicket 버튼을 클릭하면 티켓 모달 열기
     document.getElementById('bookTicket').addEventListener('click', function(event) {
         event.preventDefault();
         openModal(modals.ticket);
     });
 
-    document.getElementById('moreInfo').addEventListener('click', function(event) {
-        event.preventDefault();
-        openModal(modals.qr);
+    // moreInfo 클래스를 가진 모든 요소에 이벤트 리스너 추가
+    document.querySelectorAll('.moreInfo').forEach(function(moreInfoBtn) {
+        moreInfoBtn.addEventListener('click', function(event) {
+            event.preventDefault();  // 기본 링크 동작 방지
+            openModal(modals.qr);    // qr 모달 열기
+        });
     });
 
+    // order 버튼을 클릭하면 주문 모달 열기
     document.querySelectorAll('.order_button').forEach(function(button) {
         button.addEventListener('click', function() {
             openModal(modals.order);
         });
     });
 
-    // Close modal event listeners for close buttons
+    // 닫기 버튼 클릭 시 모달 닫기
     closeButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
             const modal = btn.closest('.modal');
@@ -127,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Close modals when clicking outside modal content
+    // 모달 외부를 클릭하면 모달 닫기
     window.addEventListener('click', function(event) {
         Object.values(modals).forEach(modal => {
             if (event.target === modal) {
@@ -136,15 +140,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Confirm and Cancel buttons close the modal
-    confirmButtons.forEach(function(btn) {   // 수정: .confirm -> .confirm-button
+    // 확인 버튼 클릭 시 모달 닫기
+    confirmButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
             const modal = btn.closest('.modal');
             closeModal(modal);
         });
     });
 
-    cancelButtons.forEach(function(btn) {    // 수정: .cancel -> .cancel-button
+    // 취소 버튼 클릭 시 모달 닫기
+    cancelButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
             const modal = btn.closest('.modal');
             closeModal(modal);
@@ -154,7 +159,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
  
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // 모든 'scroll-to-top' 버튼에 대해 클릭 이벤트를 설정
     var scrollToTopButtons = document.querySelectorAll('.scroll-to-top');
@@ -280,5 +289,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     infoItems.forEach(item => {
         observer.observe(item);
+    });
+});
+
+// egg
+document.addEventListener("DOMContentLoaded", function () {
+    const liElements = document.querySelectorAll(".egg_wrap li");
+
+    // IntersectionObserver 설정
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); // 애니메이션 완료 후 더 이상 감지하지 않음
+            }
+        });
+    }, {
+        threshold: 0.1 // 10%가 화면에 나타나면 트리거
+    });
+
+    // 모든 li 요소를 관찰
+    liElements.forEach(li => {
+        observer.observe(li);
     });
 });

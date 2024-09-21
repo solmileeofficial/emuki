@@ -994,11 +994,6 @@ p.vertical_line::after {
     transition: color 0.3s ease;
 }
 
-.round_silver_button a:hover {
-    color: #4c00ff;
-    text-shadow: 1px 1px 10px;
-}
-
 .night_slogan_left {
     position: absolute;
     bottom: -100px;

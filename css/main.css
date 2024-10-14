@@ -756,7 +756,7 @@ body {
 
 .slide_description {
     width: 760px;
-    text-align: left;
+    text-align: justify;
     font-size: 14px;
     padding-left: 20px;
     padding-top: 30px;
